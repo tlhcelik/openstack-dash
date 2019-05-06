@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "/styles/style.html" ignore missing %}
+<link rel="shortcut icon" href="static/img/favicon.ico">
+<body id="page-top">
+
+  {% include "/styles/sidebar.html" ignore missing %}
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Topbar -->
+        {% include "/styles/topbar.html" ignore missing %}
+
+
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- total images minicard -->
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+              <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1"><a href="/system/overview">Total Images <i class="fas fa-angle-double-down"></i></a></div>
+                    {% if total_images %}
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">{{total_images}}</div>
+                    {% else %}
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">0</div>
+                    {% endif %}
+
+                  </div>
+                  <div class="col-auto">
+                    <i class="fa fa-server fa-2x text-gray-300"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- total images minicard -->
+
+
+          <!-- Content Column -->
+          <div class="col-lg-6 mb-4">
+
+
+            <!-- image list card -->
+            <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                {% if image_name %}
+                <h6 class="m-0 font-weight-bold text-primary">Name : {{image_name}} </h6>
+                {% else %}
+                <h6 class="m-0 font-weight-bold text-primary">ID : {{image_id}} </h6>
+                {% endif %}
+              </div>
+
+              <div class="card-body">
+                <p>ID :</p>
+                <p>Name :</p>
+                <p>Status :</p>
+              </div>
+
+            </div>
+            <!-- image list card -->
+        
+
+          </div>
+          <!-- Content Column -->
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+      <!-- PAGE CONTENT HERE START -->
+
+      <!-- PAGE CONTENT HERE END -->
+
+      {% include "/styles/footer.html" ignore missing %}
+
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  {% include "/styles/logout-modal.html" ignore missing %}
+
+
+
+</body>
+
+</html>

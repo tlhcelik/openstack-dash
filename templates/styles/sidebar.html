@@ -1,0 +1,155 @@
+<!-- Page Wrapper -->
+<div id="wrapper">
+
+  <!-- Sidebar -->
+  <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/index">
+
+      <img src="/static/img/favicon.ico" alt="">
+
+      <div class="sidebar-brand-text mx-3">Openstack Dash <sup>Board</sup></div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+      <a class="nav-link" href="/index">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Dashboard</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+      Projects
+    </div>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+      <a class="nav-link " href="#" data-toggle="collapse" data-target="#computeCollapse" aria-expanded="true" aria-controls="collapseTwo">
+        <i class="fa fa-server"></i>
+        <span>Compute</span>
+      </a>
+      <div id="computeCollapse" class="collapse {{compute_collapse_status}}" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Nova</h6>
+          <a class="collapse-item {{overview_status}}" href="/compute/overview">Overview</a>
+          <a class="collapse-item {{instances_status}}" href="/compute/instances">Instances</a>
+          <a class="collapse-item {{volumes_status}}" href="/compute/volumes">Volumes</a>
+          <a class="collapse-item {{images_status}}" href="/compute/images">Images</a>
+          <a class="collapse-item {{keypairs_status}}" href="/compute/keypairs">Keypairs</a>
+          <a class="collapse-item {{api_access_status}}" href="/compute/api-access">API Access</a>
+        </div>
+      </div>
+
+    </li>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+      <a class="nav-link " href="#" data-toggle="collapse" data-target="#networkCollapse" aria-expanded="true" aria-controls="collapseTwo">
+        <i class="fas fa-network-wired"></i>
+        <span>Network</span>
+      </a>
+      <div id="networkCollapse" class="collapse {{network_collapse_status}}" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Neutron</h6>
+          <a class="collapse-item {{networks_status}}" href="/network/networks">Networks</a>
+          <a class="collapse-item {{routers_status}}" href="/network/routers">Routers</a>
+          <a class="collapse-item {{security_groups_status}}" href="/network/security-groups">Security Groups</a>
+          <a class="collapse-item {{floating_ips_status}}" href="/network/floating-ips">Floating IPs</a>
+        </div>
+      </div>
+
+    </li>
+    <!-- Nav Item - Utilities Collapse Menu -->
+
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#objectstorageCollapse" aria-expanded="true" aria-controls="collapseTwo">
+        <i class="fa fa-object-ungroup"></i>
+        <span>Object Storage</span>
+      </a>
+      <div id="objectstorageCollapse" class="collapse {{storage_collapse_status}}" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Swift - Ceph</h6>
+          <a class="collapse-item {{containers_status}}" href="/storage/containers">Containers</a>
+        </div>
+      </div>
+
+    </li>
+    <!-- Nav Item - Utilities Collapse Menu -->
+
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+      Admin
+    </div>
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+        <i class="fas fa-wrench"></i>
+        <span>System</span>
+      </a>
+      <div id="collapsePages" class="collapse {{system_collapse_status}}" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">sysinfo</h6>
+          <a class="collapse-item {{overview_status}}" href="/system/overview">Overview</a>
+          <a class="collapse-item {{hypervisors_status}}" href="/system/hypervisors">Hypervisors</a>
+          <a class="collapse-item {{host_aggregates_status}}" href="/system/host-aggregates">Host Aggregates</a>
+          <a class="collapse-item {{instances_status}}" href="/system/instances">Instances</a>
+          <a class="collapse-item {{volumes_status}}" href="/system/volumes">Volumes</a>
+          <a class="collapse-item {{flavors_status}}" href="/system/flavors">Flavors</a>
+          <a class="collapse-item {{images_status}}" href="/system/images">Images</a>
+          <a class="collapse-item {{routers_status}}" href="/system/routers">Routers</a>
+          <a class="collapse-item {{floating_ips_status}}" href="/system/floating-ips">Floating IPs</a>
+          <a class="collapse-item {{defaults_status}}" href="/system/defaults">Defaults</a>
+          <a class="collapse-item {{metadata_status}}" href="/system/metadata">Metadata</a>
+          <a class="collapse-item {{sys_info_status}}" href="/system/sys-info">Sys Info</a>
+        </div>
+      </div>
+    </li>
+
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#profilesCollapse" aria-expanded="true" aria-controls="collapsePages">
+        <i class="fas fa-users-cog"></i>
+        <span>Profiles</span>
+      </a>
+      <div id="profilesCollapse" class="collapse {{profiles_collapse_status}}" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <h6 class="collapse-header">Profiles</h6>
+          <a class="collapse-item {{projects_status}}" href="/profile/projects">Projects</a>
+          <a class="collapse-item {{users_status}}" href="/profile/users">Users</a>
+          <a class="collapse-item {{groups_status}}" href="/profile/groups">Groups</a>
+          <a class="collapse-item {{roles_status}}" href="/profile/roles">Roles</a>
+
+        </div>
+      </div>
+    </li>
+
+
+
+
+
+    <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline">
+      <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+
+  </ul>
+  <!-- End of Sidebar -->
