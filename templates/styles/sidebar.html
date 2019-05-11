@@ -15,11 +15,15 @@
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
 
+    {% include "/styles/loading.html" ignore missing %}
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
+
       <a class="nav-link" href="/index">
         <i class="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard</span></a>
+        <span onclick="openNav()">Dashboard</span></a>
+
+
     </li>
 
     <!-- Divider -->
@@ -39,12 +43,12 @@
       <div id="computeCollapse" class="collapse {{compute_collapse_status}}" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
           <h6 class="collapse-header">Nova</h6>
-          <a class="collapse-item {{overview_status}}" href="/compute/overview">Overview</a>
-          <a class="collapse-item {{instances_status}}" href="/compute/instances">Instances</a>
-          <a class="collapse-item {{volumes_status}}" href="/compute/volumes">Volumes</a>
-          <a class="collapse-item {{images_status}}" href="/compute/images">Images</a>
-          <a class="collapse-item {{keypairs_status}}" href="/compute/keypairs">Keypairs</a>
-          <a class="collapse-item {{api_access_status}}" href="/compute/api-access">API Access</a>
+          <a onclick="openNav()" class="collapse-item {{overview_status}}" href="/compute/overview">Overview</a>
+          <a onclick="openNav()" class="collapse-item {{instances_status}}" href="/compute/instances">Instances</a>
+          <a onclick="openNav()" class="collapse-item {{volumes_status}}" href="/compute/volumes">Volumes</a>
+          <a onclick="openNav()" class="collapse-item {{images_status}}" href="/compute/images">Images</a>
+          <a onclick="openNav()" class="collapse-item {{keypairs_status}}" href="/compute/keypairs">Keypairs</a>
+          <a onclick="openNav()" class="collapse-item {{api_access_status}}" href="/compute/api-access">API Access</a>
         </div>
       </div>
 
@@ -59,10 +63,10 @@
       <div id="networkCollapse" class="collapse {{network_collapse_status}}" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
           <h6 class="collapse-header">Neutron</h6>
-          <a class="collapse-item {{networks_status}}" href="/network/networks">Networks</a>
-          <a class="collapse-item {{routers_status}}" href="/network/routers">Routers</a>
-          <a class="collapse-item {{security_groups_status}}" href="/network/security-groups">Security Groups</a>
-          <a class="collapse-item {{floating_ips_status}}" href="/network/floating-ips">Floating IPs</a>
+          <a onclick="openNav()" class="collapse-item {{networks_status}}" href="/network/networks">Networks</a>
+          <a onclick="openNav()" class="collapse-item {{routers_status}}" href="/network/routers">Routers</a>
+          <a onclick="openNav()" class="collapse-item {{security_groups_status}}" href="/network/security-groups">Security Groups</a>
+          <a onclick="openNav()" class="collapse-item {{floating_ips_status}}" href="/network/floating-ips">Floating IPs</a>
         </div>
       </div>
 
@@ -79,7 +83,7 @@
       <div id="objectstorageCollapse" class="collapse {{storage_collapse_status}}" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
           <h6 class="collapse-header">Swift - Ceph</h6>
-          <a class="collapse-item {{containers_status}}" href="/storage/containers">Containers</a>
+          <a onclick="openNav()" class="collapse-item {{containers_status}}" href="/storage/containers">Containers</a>
         </div>
       </div>
 
@@ -104,18 +108,18 @@
       <div id="collapsePages" class="collapse {{system_collapse_status}}" aria-labelledby="headingPages" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
           <h6 class="collapse-header">sysinfo</h6>
-          <a class="collapse-item {{overview_status}}" href="/system/overview">Overview</a>
-          <a class="collapse-item {{hypervisors_status}}" href="/system/hypervisors">Hypervisors</a>
-          <a class="collapse-item {{host_aggregates_status}}" href="/system/host-aggregates">Host Aggregates</a>
-          <a class="collapse-item {{instances_status}}" href="/system/instances">Instances</a>
-          <a class="collapse-item {{volumes_status}}" href="/system/volumes">Volumes</a>
-          <a class="collapse-item {{flavors_status}}" href="/system/flavors">Flavors</a>
-          <a class="collapse-item {{images_status}}" href="/system/images">Images</a>
-          <a class="collapse-item {{routers_status}}" href="/system/routers">Routers</a>
-          <a class="collapse-item {{floating_ips_status}}" href="/system/floating-ips">Floating IPs</a>
-          <a class="collapse-item {{defaults_status}}" href="/system/defaults">Defaults</a>
-          <a class="collapse-item {{metadata_status}}" href="/system/metadata">Metadata</a>
-          <a class="collapse-item {{sys_info_status}}" href="/system/sys-info">Sys Info</a>
+          <a onclick="openNav()" class="collapse-item {{overview_status}}" href="/system/overview">Overview</a>
+          <a onclick="openNav()" class="collapse-item {{hypervisors_status}}" href="/system/hypervisors">Hypervisors</a>
+          <a onclick="openNav()" class="collapse-item {{host_aggregates_status}}" href="/system/host-aggregates">Host Aggregates</a>
+          <a onclick="openNav()" class="collapse-item {{instances_status}}" href="/system/instances">Instances</a>
+          <a onclick="openNav()" class="collapse-item {{volumes_status}}" href="/system/volumes">Volumes</a>
+          <a onclick="openNav()" class="collapse-item {{flavors_status}}" href="/system/flavors">Flavors</a>
+          <a onclick="openNav()" class="collapse-item {{images_status}}" href="/system/images">Images</a>
+          <a onclick="openNav()" class="collapse-item {{routers_status}}" href="/system/routers">Routers</a>
+          <a onclick="openNav()" class="collapse-item {{floating_ips_status}}" href="/system/floating-ips">Floating IPs</a>
+          <a onclick="openNav()" class="collapse-item {{defaults_status}}" href="/system/defaults">Defaults</a>
+          <a onclick="openNav()" class="collapse-item {{metadata_status}}" href="/system/metadata">Metadata</a>
+          <a onclick="openNav()" class="collapse-item {{sys_info_status}}" href="/system/sys-info">Sys Info</a>
         </div>
       </div>
     </li>
@@ -130,10 +134,10 @@
       <div id="profilesCollapse" class="collapse {{profiles_collapse_status}}" aria-labelledby="headingPages" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
           <h6 class="collapse-header">Profiles</h6>
-          <a class="collapse-item {{projects_status}}" href="/profile/projects">Projects</a>
-          <a class="collapse-item {{users_status}}" href="/profile/users">Users</a>
-          <a class="collapse-item {{groups_status}}" href="/profile/groups">Groups</a>
-          <a class="collapse-item {{roles_status}}" href="/profile/roles">Roles</a>
+          <a onclick="openNav()" class="collapse-item {{projects_status}}" href="/profile/projects">Projects</a>
+          <a onclick="openNav()" class="collapse-item {{users_status}}" href="/profile/users">Users</a>
+          <a onclick="openNav()" class="collapse-item {{groups_status}}" href="/profile/groups">Groups</a>
+          <a onclick="openNav()" class="collapse-item {{roles_status}}" href="/profile/roles">Roles</a>
 
         </div>
       </div>

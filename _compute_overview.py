@@ -12,7 +12,10 @@ class ComputeOverview(object):
     new_list_3 = []
 
     def __init__(self):
-        print "ComputeOverview init"
+        print "[*]ComputeOverview init"
+        del self.new_list[:]
+        del self.new_list_2[:]
+        del self.new_list_3[:]
 
     def split_list(self, alist, wanted_parts=1):
         length = len(alist)
@@ -36,8 +39,5 @@ class ComputeOverview(object):
         self.new_list_3 = self.new_list_2[6:]
 
         self.count = len(self.new_list_3) / 6
-
-        del self.new_list[:]
-        del self.new_list_2[:]
 
         return self.split_list(self.new_list_3, self.count)

@@ -27,6 +27,7 @@ def settings():
     some_value = settings_page.do_it_some_transaction()
     return render_template(v._views['settings'],
                             some_value = some_value,
+
                         )
 
 @app.route('/activity-logs')
@@ -119,11 +120,14 @@ def compute_images():
 
 @app.route('/compute/instances')
 def compute_instances():
+    quotas_list = Quotas()
+    quotas = quotas_list.get_quotas()
     return render_template('compute/instances.html',
                             instances_status="active",
                             compute_collapse_status="show",
                             page_location = "/compute/instances",
-                            page_name = "Home > Compute > Instances"
+                            page_name = "Home > Compute > Instances",
+                            quotas = quotas,
                             )
 
 @app.route('/compute/volumes')

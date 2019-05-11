@@ -19,9 +19,9 @@ class Quotas(object):
         'subnets',
     ]
     new_list_2 = []
-    new_list_3 = []
     def __init__(self):
-        print "Quotas init"
+        del self.new_list_2[:]
+        print "[*]Quotas init"
 
 
     def get_quotas(self):
