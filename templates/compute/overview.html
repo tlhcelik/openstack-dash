@@ -28,44 +28,7 @@
                   </div>
 
               <hr>
-
-                  <!-- Content Row -->
-                  <div class="row">
-
-                    <!-- Content Column -->
-                    <div class="col-lg-6 mb-4">
-
-                      <!-- show instance card -->
-                      <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                          {% if instance_name %}
-                          <h6 class="m-0 font-weight-bold text-primary">Name : {{instance_name}} </h6>
-                          {% else %}
-                          <h6 class="m-0 font-weight-bold text-primary">ID : {{instance_id}} </h6>
-                          {% endif %}
-                        </div>
-
-                        <div class="card-body">
-                          <p>ID : {{instance_id}}</p>
-                          <p>Name : {{instance_name}}</p>
-                          <p>Status : {{instance_status}}</p>
-                          <p>Networks : {{instance_networks}}</p>
-                          <p>Image : {{instance_image}}</p>
-                          <p>Flavor : {{instance_flavor}}</p>
-                        </div>
-
-                      </div>
-                      <!-- show instance card -->
-
-                    </div>
-
-                    <div class="col-lg-6 mb-4">
-
-
-
-
-                    </div>
-                  </div>
+          {% include "/styles/instance_cards.html" ignore missing %}
 
                 </div>
                 <!-- /.container-fluid -->
