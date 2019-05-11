@@ -18,7 +18,7 @@ v = Views()
 #page classes, each page have a class. (exp: _page-name.py)
 from _settings import Settings
 from _compute_overview import ComputeOverview
-
+from _quotas import Quotas
 app = Flask(__name__)
 
 @app.route('/settings')
@@ -27,6 +27,7 @@ def settings():
     some_value = settings_page.do_it_some_transaction()
     return render_template(v._views['settings'],
                             some_value = some_value,
+
                         )
 
 @app.route('/activity-logs')
@@ -56,11 +57,15 @@ def do_login():
         username = request.form['username']
         password = request.form['password']
 
+    quotas_list = Quotas()
+    quotas = quotas_list.get_quotas()
+    print quotas
     return render_template('index.html',
                             random_num = random.randint(1,100),
                             running_instances = random.randint(1,10),
                             volume_storage = random.randint(1,550),
                             ram_status = random.randint(1,100),
+                            quotas = quotas,
                         )
 
 @app.route('/login/register')
@@ -83,17 +88,16 @@ def forgot_password():
 def compute_overview():
     compute_overview_page = ComputeOverview()
     instance_values = compute_overview_page.get_instances()
+
+
     return render_template('compute/overview.html',
-                            overview_status="active",
-                            compute_collapse_status="show",
-                            page_location = "/compute/overview",
-                            page_name = "Home > Compute > Overview",
-                            instance_id = instance_values[0],
-                            instance_name =  instance_values[1],
-                            instance_status =  instance_values[2],
-                            instance_networks =  instance_values[3],
-                            instance_image =  instance_values[4],
-                            instance_flavor =  instance_values[5],
+                            compute_collapse_status = "show",
+                            overview_status     = "active",
+                            page_location       = "/compute/overview",
+                            page_name           = "Home > Compute > Overview",
+                            instance_values     = instance_values,
+                            instance_count     =  len(instance_values),
+
                             )
 
 @app.route('/compute/api-access')
@@ -116,11 +120,14 @@ def compute_images():
 
 @app.route('/compute/instances')
 def compute_instances():
+    quotas_list = Quotas()
+    quotas = quotas_list.get_quotas()
     return render_template('compute/instances.html',
                             instances_status="active",
                             compute_collapse_status="show",
                             page_location = "/compute/instances",
-                            page_name = "Home > Compute > Instances"
+                            page_name = "Home > Compute > Instances",
+                            quotas = quotas,
                             )
 
 @app.route('/compute/volumes')

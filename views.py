@@ -7,4 +7,5 @@ class Views(object):
             "settings": "settings.html",
             "activity-logs": "activity-logs.html",
             "blank": "blank.html",
+            "table": "/others/tables.html"
             }
