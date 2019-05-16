@@ -2,4 +2,4 @@ STATUS: [![Build Status](https://travis-ci.com/tlhcelik/openstack-dash.svg?token
 
 
 # openstack-dash
-Openstack Dashboard
+Openstack dashboard with flask microframework 
