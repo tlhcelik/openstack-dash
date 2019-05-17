@@ -1,0 +1,654 @@
+ * Serving Flask app "main" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:1158/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 922-981-327
+10.0.0.1 - - [11/May/2019 13:12:50] "GET / HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:12:50] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:12:50] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:12:50] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:12:50] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:12:50] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:12:50] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:12:50] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:12:50] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:12:50] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:12:50] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:12:50] "GET / HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:12:51] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:12:51] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:12:51] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:12:51] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:12:51] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:12:51] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:12:51] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:12:51] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:12:51] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:12:51] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:12:51] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:12:51] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:12:51] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:12:51] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:12:51] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:12:51] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:12:51] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:12:51] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+Missing value auth-url required for auth plugin password
+10.0.0.1 - - [11/May/2019 13:12:57] "POST /index HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/osbash/tlhcelik/openstack-dash/main.py", line 61, in do_login
+    quotas = quotas_list.get_quotas()
+  File "/home/osbash/tlhcelik/openstack-dash/_quotas.py", line 29, in get_quotas
+    self.x = sp.check_output(['openstack', 'quota', 'show', '--default', '--format', 'yaml']).split()
+  File "/usr/lib/python2.7/subprocess.py", line 223, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+CalledProcessError: Command '['openstack', 'quota', 'show', '--default', '--format', 'yaml']' returned non-zero exit status 1
+10.0.0.1 - - [11/May/2019 13:12:57] "GET /index?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:12:57] "GET /index?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:12:57] "GET /index?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:12:57] "GET /index?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:12:57] "GET /index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:12:57] "GET /index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+Missing value auth-url required for auth plugin password
+10.0.0.1 - - [11/May/2019 13:13:14] "POST /index HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/osbash/tlhcelik/openstack-dash/main.py", line 61, in do_login
+    quotas = quotas_list.get_quotas()
+  File "/home/osbash/tlhcelik/openstack-dash/_quotas.py", line 29, in get_quotas
+    self.x = sp.check_output(['openstack', 'quota', 'show', '--default', '--format', 'yaml']).split()
+  File "/usr/lib/python2.7/subprocess.py", line 223, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+CalledProcessError: Command '['openstack', 'quota', 'show', '--default', '--format', 'yaml']' returned non-zero exit status 1
+10.0.0.1 - - [11/May/2019 13:13:15] "GET /index?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:13:15] "GET /index?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:13:15] "GET /index?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:13:15] "GET /index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:13:15] "GET /index?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:13:15] "GET /index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:13:17] "GET / HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET / HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:13:18] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+Missing value auth-url required for auth plugin password
+10.0.0.1 - - [11/May/2019 13:13:42] "POST /index HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/osbash/tlhcelik/openstack-dash/main.py", line 61, in do_login
+    quotas = quotas_list.get_quotas()
+  File "/home/osbash/tlhcelik/openstack-dash/_quotas.py", line 29, in get_quotas
+    self.x = sp.check_output(['openstack', 'quota', 'show', '--default', '--format', 'yaml']).split()
+  File "/usr/lib/python2.7/subprocess.py", line 223, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+CalledProcessError: Command '['openstack', 'quota', 'show', '--default', '--format', 'yaml']' returned non-zero exit status 1
+10.0.0.1 - - [11/May/2019 13:13:42] "GET /index?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:13:42] "GET /index?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:13:42] "GET /index?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:13:42] "GET /index?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:13:42] "GET /index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+Missing value auth-url required for auth plugin password
+10.0.0.1 - - [11/May/2019 13:13:53] "POST /index HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/osbash/tlhcelik/openstack-dash/main.py", line 61, in do_login
+    quotas = quotas_list.get_quotas()
+  File "/home/osbash/tlhcelik/openstack-dash/_quotas.py", line 29, in get_quotas
+    self.x = sp.check_output(['openstack', 'quota', 'show', '--default', '--format', 'yaml']).split()
+  File "/usr/lib/python2.7/subprocess.py", line 223, in check_output
+    raise CalledProcessError(retcode, cmd, output=output)
+CalledProcessError: Command '['openstack', 'quota', 'show', '--default', '--format', 'yaml']' returned non-zero exit status 1
+10.0.0.1 - - [11/May/2019 13:13:53] "GET /index?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:13:53] "GET /index?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:13:53] "GET /index?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:13:53] "GET /index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:13:54] "GET /index?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:13:54] "GET /index?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[*]Quotas init
+[*]Quotas init
+[*]Quotas init
+[*]Quotas init
+ * Serving Flask app "main" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:1158/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 922-981-327
+10.0.0.1 - - [11/May/2019 13:15:45] "GET / HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:15:45] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:45] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:45] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:45] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:45] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:45] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:45] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:45] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:45] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:45] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:45] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:45] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:45] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:45] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:52] "POST /index HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:15:52] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:52] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:52] "GET /static/img/loading.gif HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:15:52] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:52] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:52] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:52] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:52] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:52] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:52] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:52] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:52] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:52] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:52] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:52] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:15:52] "GET /static/img/logs.png HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:15:53] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:16:05] "GET /compute/overview HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:16:05] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:05] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:05] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:05] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:05] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:05] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:05] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:05] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:05] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:05] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:05] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:05] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:05] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:05] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:05] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:05] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:05] "GET /compute/static/img/favicon.ico HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:16:50] "GET /network/networks HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:16:50] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:50] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:50] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:50] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:50] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:50] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:50] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:50] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:50] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:50] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:50] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:50] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:50] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:50] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:50] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:50] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:16:50] "GET /network/static/img/favicon.ico HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:16:59] "GET /compute/overview HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:16:59] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:17:00] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:17:00] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:17:00] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:17:00] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:17:00] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:17:00] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:17:00] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:17:00] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:17:00] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:17:00] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:17:00] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:17:00] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:17:00] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:17:00] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:17:00] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:45] "GET /compute/overview HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:19:46] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:46] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:46] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:46] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:46] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:46] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:46] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:46] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:46] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:46] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:46] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:46] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:46] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:46] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:46] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:46] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:58] "GET /compute/instances HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:19:58] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:58] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:58] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:58] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:58] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:58] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:58] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:58] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:58] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:58] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:58] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:58] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:58] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:58] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:58] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:19:58] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:04] "GET /compute/overview HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:20:04] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:04] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:04] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:04] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:04] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:04] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:04] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:04] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:04] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:04] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:04] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:04] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:04] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:04] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:04] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:04] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:42] "GET /compute/overview HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:20:42] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:42] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:42] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:42] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:42] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:42] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:42] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:42] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:42] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:42] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:43] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:43] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:43] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:43] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:43] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:20:43] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:24:41] "GET /compute/overview HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:24:41] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:24:41] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:24:41] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:24:41] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:24:41] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:24:41] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:24:41] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:24:41] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:24:41] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:24:41] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:24:41] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:24:41] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:24:41] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:24:41] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:24:41] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:24:42] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:24:48] "GET /compute/overview/%3Ctest-instance%3E HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:24:49] "GET /favicon.ico HTTP/1.1" 404 -
+ * Detected change in '/home/osbash/tlhcelik/openstack-dash/main.py', reloading
+[*]Quotas init
+['20', '51200', '10', '10', '100', '10', '10', '10']
+[*]ComputeOverview init
+[*]ComputeOverview init
+[*]ComputeOverview init
+[*]Quotas init
+[*]ComputeOverview init
+[*]ComputeOverview init
+[*]ComputeOverview init
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 922-981-327
+10.0.0.1 - - [11/May/2019 13:30:21] "GET /compute/overview/%3Ctest-instance%3E HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: compute_overview() takes no arguments (1 given)
+10.0.0.1 - - [11/May/2019 13:30:21] "GET /compute/overview/%3Ctest-instance%3E?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:30:21] "GET /compute/overview/%3Ctest-instance%3E?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:30:21] "GET /compute/overview/%3Ctest-instance%3E?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:30:22] "GET /compute/overview/%3Ctest-instance%3E?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:30:22] "GET /compute/overview/%3Ctest-instance%3E?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:30:22] "GET /compute/overview/%3Ctest-instance%3E?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:30:29] "GET /compute/overview/test-instance HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: compute_overview() takes no arguments (1 given)
+10.0.0.1 - - [11/May/2019 13:30:29] "GET /compute/overview/test-instance?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:30:29] "GET /compute/overview/test-instance?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:30:29] "GET /compute/overview/test-instance?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:30:29] "GET /compute/overview/test-instance?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:30:29] "GET /compute/overview/test-instance?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:30:29] "GET /compute/overview/test-instance?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ * Detected change in '/home/osbash/tlhcelik/openstack-dash/main.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 922-981-327
+10.0.0.1 - - [11/May/2019 13:30:55] "GET /compute/overview/test-instance HTTP/1.1" 200 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /compute/static/css/sb-admin-2.min.css HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /compute/static/vendor/jquery/jquery.min.js HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /compute/static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /compute/static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /compute/static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /compute/static/js/sb-admin-2.min.js HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /compute/static/vendor/chart.js/Chart.min.js HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /compute/static/js/demo/chart-area-demo.js HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /compute/static/js/demo/chart-pie-demo.js HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /compute/static/vendor/jquery/jquery.min.js HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /compute/static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /compute/static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /compute/static/js/sb-admin-2.min.js HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /compute/static/vendor/chart.js/Chart.min.js HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /compute/static/js/demo/chart-area-demo.js HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /compute/static/js/demo/chart-pie-demo.js HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /compute/static/css/sb-admin-2.min.css HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:30:56] "GET /compute/overview/static/img/favicon.ico HTTP/1.1" 404 -
+10.0.0.1 - - [11/May/2019 13:31:13] "GET /compute/overview/a HTTP/1.1" 200 -
+ * Detected change in '/home/osbash/tlhcelik/openstack-dash/_compute_overview.py', reloading
+[*]ComputeOverview init
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 922-981-327
+ * Detected change in '/home/osbash/tlhcelik/openstack-dash/main.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 922-981-327
+10.0.0.1 - - [17/May/2019 12:04:36] "GET / HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:04:37] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [17/May/2019 12:04:37] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [17/May/2019 12:04:37] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [17/May/2019 12:04:37] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [17/May/2019 12:04:37] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [17/May/2019 12:04:37] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [17/May/2019 12:04:37] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [17/May/2019 12:04:37] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [17/May/2019 12:04:37] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [17/May/2019 12:04:37] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [17/May/2019 12:04:37] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [17/May/2019 12:04:37] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [17/May/2019 12:04:37] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [17/May/2019 12:04:37] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [17/May/2019 12:04:45] "POST /index HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:04:45] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [17/May/2019 12:04:45] "GET /static/img/logs.png HTTP/1.1" 304 -
+10.0.0.1 - - [17/May/2019 12:04:46] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [17/May/2019 12:04:51] "GET /compute/overview HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: compute_overview() takes exactly 1 argument (0 given)
+10.0.0.1 - - [17/May/2019 12:04:51] "GET /compute/overview?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:04:51] "GET /compute/overview?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:04:51] "GET /compute/overview?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:04:52] "GET /compute/overview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:04:52] "GET /compute/overview?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:04:52] "GET /compute/overview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:06:45] "GET /compute/overview HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: compute_overview() takes exactly 1 argument (0 given)
+10.0.0.1 - - [17/May/2019 12:06:46] "GET /compute/overview?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:06:46] "GET /compute/overview?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:06:46] "GET /compute/overview?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:06:46] "GET /compute/overview?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:06:46] "GET /compute/overview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:06:46] "GET /compute/overview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ * Detected change in '/home/osbash/tlhcelik/openstack-dash/main.py', reloading
+[*]Quotas init
+['20', '51200', '10', '10', '100', '10', '10', '10']
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 922-981-327
+10.0.0.1 - - [17/May/2019 12:07:03] "GET /compute/overview HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/osbash/tlhcelik/openstack-dash/main.py", line 93, in compute_overview
+    if instance_name != '':
+NameError: global name 'instance_name' is not defined
+10.0.0.1 - - [17/May/2019 12:07:03] "GET /compute/overview?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:07:03] "GET /compute/overview?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:07:03] "GET /compute/overview?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:07:03] "GET /compute/overview?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:07:03] "GET /compute/overview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:07:03] "GET /compute/overview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ * Detected change in '/home/osbash/tlhcelik/openstack-dash/main.py', reloading
+[*]ComputeOverview init
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 922-981-327
+10.0.0.1 - - [17/May/2019 12:07:08] "GET /compute/overview HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+TypeError: compute_overview() takes exactly 1 argument (0 given)
+10.0.0.1 - - [17/May/2019 12:07:09] "GET /compute/overview?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:07:09] "GET /compute/overview?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:07:09] "GET /compute/overview?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:07:09] "GET /compute/overview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:07:09] "GET /compute/overview?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:07:09] "GET /compute/overview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:08:03] "GET /compute/overview/a HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/osbash/.local/lib/python2.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/osbash/tlhcelik/openstack-dash/main.py", line 94, in compute_overview
+    start_instance_status = compute_overview_page.start_instance(name=instance_name)
+TypeError: start_instance() got multiple values for keyword argument 'name'
+10.0.0.1 - - [17/May/2019 12:08:03] "GET /compute/overview/a?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:08:03] "GET /compute/overview/a?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:08:03] "GET /compute/overview/a?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:08:04] "GET /compute/overview/a?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:08:04] "GET /compute/overview/a?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+10.0.0.1 - - [17/May/2019 12:08:04] "GET /compute/overview/a?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ * Detected change in '/home/osbash/tlhcelik/openstack-dash/_compute_overview.py', reloading
+[*]ComputeOverview init
+ * Restarting with stat
+Traceback (most recent call last):
+  File "/home/osbash/tlhcelik/openstack-dash/main.py", line 20, in <module>
+    from _compute_overview import ComputeOverview
+  File "/home/osbash/tlhcelik/openstack-dash/_compute_overview.py", line 8, in <module>
+    class ComputeOverview(object):
+  File "/home/osbash/tlhcelik/openstack-dash/_compute_overview.py", line 45, in ComputeOverview
+    def start_instance(name=name):
+NameError: name 'name' is not defined

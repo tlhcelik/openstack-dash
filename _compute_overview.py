@@ -41,3 +41,24 @@ class ComputeOverview(object):
         self.count = len(self.new_list_3) / 6
 
         return self.split_list(self.new_list_3, self.count)
+
+    def start_instance(self, name):
+        try:
+            self.status = sp.check_output(['openstack', 'server', 'start', name])
+            return 1
+        except Exception as e:
+            return e
+
+    def suspend_instance(self, name):
+        try:
+            self.status = sp.check_output(['openstack', 'server', 'suspend', name])
+            return 1
+        except Exception as e:
+            return e
+
+    def resume_instance(self, name):
+        try:
+            self.status = sp.check_output(['openstack', 'server', 'resume', name])
+            return 1
+        except Exception as e:
+            return e
