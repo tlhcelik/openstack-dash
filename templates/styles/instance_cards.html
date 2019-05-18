@@ -1,39 +1,41 @@
 <div class="row">
   {% for i in range(0, instance_count) %}
-  <div class="col-lg-6">
+    <div class="col-lg-6">
 
-    <!-- Dropdown Card Example -->
-    <div class="card shadow mb-4">
-      <!-- Card Header - Dropdown -->
-      <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-        <h6 class="m-0 font-weight-bold text-primary">{{instance_values[i][1]}}</h6>
-        <div class="dropdown no-arrow">
-          <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(17px, 19px, 0px);">
-            <a onclick="openNav()" class="dropdown-item" href="/r/start.{{instance_values[i][1]}}">Start Instance</a>
-            <a onclick="openNav()" class="dropdown-item" href="/r/suspend.{{instance_values[i][1]}}">Suspend Instance</a>
-            <a onclick="openNav()" class="dropdown-item" href="/r/resume.{{instance_values[i][1]}}">Resume Instance</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" style="color: rgb(231,74,59)" href="#">Terminate Instance</a>
+      <!-- Dropdown Card Example -->
+      <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">{{instance_values[i][1]}}</h6>
+          <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(17px, 19px, 0px);">
+              <a onclick="openNav()" class="dropdown-item" href="/start/{{instance_values[i][1]}}">Start Instance</a>
+              <a onclick="openNav()" class="dropdown-item" href="/suspend/{{instance_values[i][1]}}">Suspend Instance</a>
+              <a onclick="openNav()" class="dropdown-item" href="/resume/{{instance_values[i][1]}}">Resume Instance</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" style="color: rgb(231,74,59)" href="/terminate/{{instance_values[i][1]}}">Terminate Instance</a>
+            </div>
           </div>
         </div>
+        <!-- Card Body -->
+        <div class="card-body">
+          <p><bold>ID</bold> : {{instance_values[i][0]}}</p>
+          <p><bold>Name</bold> : {{instance_values[i][1]}}</p>
+          {% if instance_values[i][2] == "ACTIVE" %}
+            <p style="color: rgb(28,200,138)"><bold>Status</bold> : {{instance_values[i][2]}}</p>
+          {% else %}
+            <p style="color: rgb(231,74,59)"><bold>Status</bold> : {{instance_values[i][2]}}</p>
+          {% endif %}
+          <p><bold>Network</bold> : {{instance_values[i][3]}}</p>
+          <p><bold>Image</bold> : {{instance_values[i][4]}}</p>
+          <p><bold>Falvor</bold> : {{instance_values[i][5]}}</p>
+          </div>
       </div>
-      <!-- Card Body -->
-      <div class="card-body">
-        <p>ID : {{instance_values[i][0]}}</p>
-        <p>Name : {{instance_values[i][1]}}</p>
-        <p>Status : {{instance_values[i][2]}}</p>
-        <p>Network : {{instance_values[i][3]}}</p>
-        <p>Image : {{instance_values[i][4]}}</p>
-        <p>Falvor : {{instance_values[i][5]}}</p>
-        </div>
+
     </div>
-
-  </div>
-
-
   {% endfor %}
 
 </div>

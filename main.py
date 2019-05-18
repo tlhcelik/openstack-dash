@@ -84,17 +84,19 @@ def forgot_password():
 # compute definitions start
 ################################################################################
 
-@app.route('/r/<instance_name>')
-def instance_transactions(instance_name):
-    name = instance_name.split('.')
+@app.route('/<action>/<instance_name>')
+def instance_transactions(action, instance_name):
     compute_overview_page = ComputeOverview()
-    if name[0] == 'start':
-        status = compute_overview_page.start_instance(name[1])
-    elif name[0] == 'suspend':
-        status = compute_overview_page.suspend_instance(name[1])
-    elif name[0] == 'resume':
-        status = compute_overview_page.resume_instance(name[1])
 
+    if action == 'start':
+        status = compute_overview_page.start_instance(instance_name)
+    elif action == 'suspend':
+        status = compute_overview_page.suspend_instance(instance_name)
+    elif action == 'resume':
+        status = compute_overview_page.resume_instance(instance_name)
+    elif action == 'terminate':
+        status = compute_overview_page.terminate_instance(instance_name)
+        
     return compute_overview()
 
 @app.route('/compute/overview2')

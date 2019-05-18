@@ -37,7 +37,6 @@ class ComputeOverview(object):
             self.new_list_2.append(self.new_list[i].replace('\"',''))
 
         self.new_list_3 = self.new_list_2[6:]
-
         self.count = len(self.new_list_3) / 6
 
         return self.split_list(self.new_list_3, self.count)
@@ -45,20 +44,35 @@ class ComputeOverview(object):
     def start_instance(self, name):
         try:
             self.status = sp.check_output(['openstack', 'server', 'start', name])
+            print "[*]Instance start succecfully"
             return 1
         except Exception as e:
-            return e
+            print e
+            return 0
 
     def suspend_instance(self, name):
         try:
             self.status = sp.check_output(['openstack', 'server', 'suspend', name])
+            print "[*]Instance suspend succecfully"
             return 1
         except Exception as e:
-            return e
+            print e
+            return 0
 
     def resume_instance(self, name):
         try:
             self.status = sp.check_output(['openstack', 'server', 'resume', name])
+            print "[*]Instance resume succecfully"
             return 1
         except Exception as e:
-            return e
+            print e
+            return 0
+
+    def resume_instance(self, name):
+        try:
+            self.status = sp.check_output(['nova', 'delete', name])
+            print "[*]Instance delete(terminate) succecfully"
+            return 1
+        except Exception as e:
+            print e
+            return 0
