@@ -107,16 +107,8 @@ def create_instance():
 @app.route('/<action>/<instance_name>')
 def instance_transactions(action, instance_name):
     compute_overview_page = ComputeOverview()
-
-    if action == 'start':
-        status = compute_overview_page.start_instance(instance_name)
-    elif action == 'suspend':
-        status = compute_overview_page.suspend_instance(instance_name)
-    elif action == 'resume':
-        status = compute_overview_page.resume_instance(instance_name)
-    elif action == 'terminate':
-        status = compute_overview_page.terminate_instance(instance_name)
-
+    status = compute_overview_page.instance_action(action, instance_name)
+    
     return compute_overview()
 
 @app.route('/compute/overview2')

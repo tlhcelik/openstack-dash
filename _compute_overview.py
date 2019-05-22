@@ -41,6 +41,22 @@ class ComputeOverview(object):
 
         return self.split_list(self.new_list_3, self.count)
 
+    def instance_action(self, action, name):
+        if action == 'start':
+            self.status = self.start_instance(name)
+
+        elif action == 'suspend':
+            self.status = self.suspend_instance(name)
+
+        elif action == 'resume':
+            self.status = self.resume_instance(name)
+
+        elif action == 'terminate':
+            self.status = self.terminate_instance(name)
+
+        else:
+            return "[!]Error. Wrong action."
+
     def start_instance(self, name):
         try:
             self.status = sp.check_output(['openstack', 'server', 'start', name])
