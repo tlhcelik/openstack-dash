@@ -63,8 +63,30 @@
                     <div class="form-group">
                       <p>Image:
 
-                      <select>
-                          <option value="ubuntu-18">Ubuntu 18.04 LTS</option>
+                      <select name="image_id">
+                          <option value="6f46c5c1-0276-46ef-90d0-c247ecbec6f1">cirros</option>
+                          <option value="ubuntu-14">Ubuntu 14.04 LTS Stable</option>
+                          <option value="centos-6">CentOS 6</option>
+                      </select>
+                    </p>
+                    </div>
+
+                    <div class="form-group">
+                      <p>Flavor:
+
+                      <select name="flavor_id">
+                          <option value="c3cd9122-c844-41ea-8087-20126ec9f5b7">xxl</option>
+                          <option value="ubuntu-14">Ubuntu 14.04 LTS Stable</option>
+                          <option value="centos-6">CentOS 6</option>
+                      </select>
+                    </p>
+                    </div>
+
+                    <div class="form-group">
+                      <p>Security Group:
+
+                      <select name="security_group_id">
+                          <option value="04dcc3a1-e512-4e77-b9d9-1db82042c233">default-sec-group</option>
                           <option value="ubuntu-14">Ubuntu 14.04 LTS Stable</option>
                           <option value="centos-6">CentOS 6</option>
                       </select>

@@ -84,6 +84,26 @@ def forgot_password():
 # compute definitions start
 ################################################################################
 
+@app.route('/compute/create-instance', methods=['POST', 'GET'])
+def create_instance():
+    compute_overview_page = ComputeOverview()
+
+    instance_name       = request.args.get('instance_name')
+    counter             = request.args.get('counter')
+    image_id            = request.args.get('image_id')
+    flavor_id           = request.args.get('flavor_id')
+    security_group_id   = request.args.get('security_group_id')
+
+    status = compute_overview_page.create_instance(instance_name,
+                                                    counter,
+                                                    image_id,
+                                                    flavor_id,
+                                                    security_group_id
+                                                    )
+
+
+    return compute_overview()
+
 @app.route('/<action>/<instance_name>')
 def instance_transactions(action, instance_name):
     compute_overview_page = ComputeOverview()
@@ -96,7 +116,7 @@ def instance_transactions(action, instance_name):
         status = compute_overview_page.resume_instance(instance_name)
     elif action == 'terminate':
         status = compute_overview_page.terminate_instance(instance_name)
-        
+
     return compute_overview()
 
 @app.route('/compute/overview2')

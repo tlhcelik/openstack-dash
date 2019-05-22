@@ -68,10 +68,23 @@ class ComputeOverview(object):
             print e
             return 0
 
-    def resume_instance(self, name):
+    def terminate_instance(self, name):
         try:
             self.status = sp.check_output(['nova', 'delete', name])
             print "[*]Instance delete(terminate) succecfully"
+            return 1
+        except Exception as e:
+            print e
+            return 0
+
+    def create_instance(self, name, counter, image_id, flavor_id, security_group_id):
+        try:
+            self.status = sp.check_output(['openstack', 'server', 'create',
+                                            '--flavor', flavor_id,
+                                            '--image', image_id,
+                                            '--security-group', security_group_id,
+                                            name])
+            print "[*]Instance create succecfully"
             return 1
         except Exception as e:
             print e
