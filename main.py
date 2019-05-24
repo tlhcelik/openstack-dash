@@ -22,7 +22,7 @@ from _quotas import Quotas
 from _enviroments import Enviroments
 
 #globals
-NOTIFY = 'All clear'
+NOTIFY = ''
 
 app = Flask(__name__)
 
@@ -94,11 +94,11 @@ def create_instance():
     global NOTIFY
     compute_overview_page = ComputeOverview()
 
-    instance_name       = request.args.get('instance_name')
-    counter             = request.args.get('counter')
-    image_id            = request.args.get('image_id')
-    flavor_id           = request.args.get('flavor_id')
     security_group_id   = request.args.get('security_group_id')
+    instance_name       = request.args.get('instance_name')
+    flavor_id           = request.args.get('flavor_id')
+    image_id            = request.args.get('image_id')
+    counter             = request.args.get('counter')
 
     status = compute_overview_page.create_instance(instance_name,
                                                     counter,
@@ -107,7 +107,7 @@ def create_instance():
                                                     security_group_id
                                                     )
 
-    NOTIFY = status
+    NOTIFY = status+" to "+str(instance_name)
     return compute_overview()
 
 @app.route('/<action>/<instance_name>')
@@ -136,14 +136,6 @@ def compute_overview():
                             instance_values     = instance_values,
                             instance_count      = len(instance_values),
                             )
-
-@app.route('/compute/test')
-def compute_test():
-    enviroments = Enviroments()
-
-    sec_group = enviroments.get_sec_group()
-
-    return "TEST ENDED"
 
 @app.route('/compute/instances')
 def compute_instances():

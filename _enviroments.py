@@ -25,10 +25,10 @@ class Enviroments(object):
         3:'project',
         4:'tag',
     }
-    sec_group_list_edited = []
+    sec_group_list = []
 
     def __init__(self):
-        del self.sec_group_list_edited[:]
+        del self.sec_group_list[:]
         print "\t[*]Enviroments init"
 
     def split_list(self, alist, wanted_parts=1):
@@ -45,11 +45,7 @@ class Enviroments(object):
         return self.split_list(self.image_list, len(self.image_list)/3 )
 
     def get_sec_group(self):
-        self.sec_group_list = sp.check_output(['openstack', 'security', 'group', 'list', '--format', 'csv']).replace('\n', ',').split(',')
-        self.sec_group_list_edited = self.split_list(self.sec_group_list, len(self.sec_group_list)/5 )[1:]
+        self.temp = sp.check_output(['openstack', 'security', 'group', 'list', '--format', 'csv']).replace('\n', ',').replace('\"','').split(',')
+        self.sec_group_list = self.split_list(self.temp, len(self.temp)/5 )[1:]
 
-        for i in range(len(self.sec_group_list_edited)):
-            for j in range(len(self.sec_group_list_edited)):
-                self.sec_group_list_edited[i][j].replace('\"', '')
-
-        return self.sec_group_list_edited
+        return self.sec_group_list

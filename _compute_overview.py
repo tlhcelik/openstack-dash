@@ -44,54 +44,45 @@ class ComputeOverview(object):
     def instance_action(self, action, name):
         if action == 'start':
             self.status = self.start_instance(name)
-
+            return self.status
         elif action == 'suspend':
             self.status = self.suspend_instance(name)
-
+            return self.status
         elif action == 'resume':
             self.status = self.resume_instance(name)
+            return self.status
 
         elif action == 'terminate':
             self.status = self.terminate_instance(name)
-
-        else:
-            return "[!]Error. Wrong action."
+            return self.status
 
     def start_instance(self, name):
         try:
             self.status = sp.check_output(['openstack', 'server', 'start', name])
-            print "[*]Instance start succecfully"
-            return 1
+            return "Instance start succecfully"
         except Exception as e:
-            print e
-            return 0
+            return "Instance start unsuccecfully"
 
     def suspend_instance(self, name):
         try:
             self.status = sp.check_output(['openstack', 'server', 'suspend', name])
-            print "[*]Instance suspend succecfully"
-            return 1
+            return "Instance suspend succecfully"
         except Exception as e:
-            print e
-            return 0
+            return "Instance suspend unsuccecfully"
 
     def resume_instance(self, name):
         try:
             self.status = sp.check_output(['openstack', 'server', 'resume', name])
-            print "[*]Instance resume succecfully"
-            return 1
+            return "Instance resume succecfully"
         except Exception as e:
-            print e
-            return 0
+            return "Instance resume unsuccecfully"
 
     def terminate_instance(self, name):
         try:
             self.status = sp.check_output(['nova', 'delete', name])
-            print "[*]Instance delete(terminate) succecfully"
-            return 1
+            return "Instance delete(terminate) succecfully"
         except Exception as e:
-            print e
-            return 0
+            return "Instance delete(terminate) unsuccecfully"
 
     def create_instance(self, name, counter, image_id, flavor_id, security_group_id):
         try:

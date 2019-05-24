@@ -27,6 +27,7 @@
           {% endif %}
           <ul class="navbar-nav ml-auto">
 
+          <!-- alarm start -->
             {% if notify %}
             <li class="nav-item dropdown no-arrow mx-1 show">
               <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -46,15 +47,12 @@
                     </div>
                   </div>
                   <div>
-                    <div class="small text-gray-500">XXX minutes ago</div>
                     <span class="font-weight-bold">{{notify}}</span>
                   </div>
-                </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">Close</a>
               </div>
             </li>
             {% endif %}
-
+            <!-- alarm end -->
 
             <!-- Nav Item - Creator dropdown -->
             <li class="nav-item dropdown no-arrow mx-1">
