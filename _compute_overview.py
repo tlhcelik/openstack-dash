@@ -100,8 +100,7 @@ class ComputeOverview(object):
                                             '--image', image_id,
                                             '--security-group', security_group_id,
                                             name])
-            print "[*]Instance create succecfully"
-            return 1
+
+            return "Instance create succecfully"
         except Exception as e:
-            print e
-            return 0
+            return "Instance create unsuccecfully"

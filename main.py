@@ -19,6 +19,11 @@ v = Views()
 from _settings import Settings
 from _compute_overview import ComputeOverview
 from _quotas import Quotas
+from _enviroments import Enviroments
+
+#globals
+NOTIFY = 'All clear'
+
 app = Flask(__name__)
 
 @app.route('/settings')
@@ -86,6 +91,7 @@ def forgot_password():
 
 @app.route('/compute/create-instance', methods=['POST', 'GET'])
 def create_instance():
+    global NOTIFY
     compute_overview_page = ComputeOverview()
 
     instance_name       = request.args.get('instance_name')
@@ -101,18 +107,23 @@ def create_instance():
                                                     security_group_id
                                                     )
 
-
+    NOTIFY = status
     return compute_overview()
 
 @app.route('/<action>/<instance_name>')
 def instance_transactions(action, instance_name):
+    global NOTIFY
     compute_overview_page = ComputeOverview()
     status = compute_overview_page.instance_action(action, instance_name)
-    
+    NOTIFY = status
+
     return compute_overview()
 
-@app.route('/compute/overview2')
+@app.route('/compute/overview')
 def compute_overview():
+    global NOTIFY
+    status = NOTIFY
+
     compute_overview_page = ComputeOverview()
     instance_values = compute_overview_page.get_instances()
 
@@ -121,9 +132,38 @@ def compute_overview():
                             overview_status     = "active",
                             page_location       = "/compute/overview",
                             page_name           = "Home > Compute > Overview",
+                            notify              = status,
                             instance_values     = instance_values,
-                            instance_count     =  len(instance_values),
+                            instance_count      = len(instance_values),
+                            )
 
+@app.route('/compute/test')
+def compute_test():
+    enviroments = Enviroments()
+
+    sec_group = enviroments.get_sec_group()
+
+    return "TEST ENDED"
+
+@app.route('/compute/instances')
+def compute_instances():
+    quotas_list = Quotas()
+    quotas = quotas_list.get_quotas()
+
+    enviroments = Enviroments()
+    flavors = enviroments.get_flavors()
+    images = enviroments.get_images()
+    sec_groups = enviroments.get_sec_group()
+
+    return render_template('compute/instances.html',
+                            page_name               = "Home > Compute > Instances",
+                            instances_status        = "active",
+                            compute_collapse_status = "show",
+                            page_location           = "/compute/instances",
+                            quotas                  = quotas,
+                            flavors                 = flavors,
+                            images                  = images,
+                            sec_groups              = sec_groups,
                             )
 
 @app.route('/compute/api-access')
@@ -132,7 +172,7 @@ def compute_access():
                             api_access_status="active",
                             compute_collapse_status="show",
                             page_location = "/compute/api-access",
-                            page_name = "Home > Compute > API Access"
+                            page_name = "Home > Compute > API Access",
                             )
 
 @app.route('/compute/images')
@@ -142,18 +182,6 @@ def compute_images():
                             compute_collapse_status="show",
                             page_location = "/compute/images",
                             page_name = "Home > Compute > Images"
-                            )
-
-@app.route('/compute/instances')
-def compute_instances():
-    quotas_list = Quotas()
-    quotas = quotas_list.get_quotas()
-    return render_template('compute/instances.html',
-                            instances_status="active",
-                            compute_collapse_status="show",
-                            page_location = "/compute/instances",
-                            page_name = "Home > Compute > Instances",
-                            quotas = quotas,
                             )
 
 @app.route('/compute/volumes')

@@ -21,7 +21,7 @@ class Quotas(object):
     new_list_2 = []
     def __init__(self):
         del self.new_list_2[:]
-        print "[*]Quotas init"
+        print "\t[*]Quotas init"
 
 
     def get_quotas(self):
