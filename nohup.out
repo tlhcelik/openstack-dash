@@ -652,3 +652,35 @@ Traceback (most recent call last):
   File "/home/osbash/tlhcelik/openstack-dash/_compute_overview.py", line 45, in ComputeOverview
     def start_instance(name=name):
 NameError: name 'name' is not defined
+ * Serving Flask app "main" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:1158/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-818-505
+10.0.0.1 - - [25/May/2019 22:50:03] "GET / HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 22:50:04] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 22:50:04] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 22:50:04] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 22:50:04] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 22:50:04] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 22:50:04] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 22:50:04] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 22:50:04] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 22:50:04] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 22:50:04] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 22:50:04] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 22:50:04] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 22:50:04] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 22:50:04] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 22:50:06] "GET /static/img/favicon.ico HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 22:50:25] "POST /index HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 22:50:25] "GET /static/img/loading.gif HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 22:50:25] "GET /static/img/logs.png HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 22:50:26] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 22:51:07] "GET /compute/overview2 HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 22:52:19] "GET /compute/instances HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 22:53:17] "GET /compute/create-instance?instance_name=hello-world&counter=1&image_id=6f46c5c1-0276-46ef-90d0-c247ecbec6f1&flavor_id=c3cd9122-c844-41ea-8087-20126ec9f5b7&security_group_id=8fad6ef6-c73a-4375-8eb7-57b1b5b1447d HTTP/1.1" 200 -
