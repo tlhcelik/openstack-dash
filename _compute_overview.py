@@ -12,7 +12,7 @@ class ComputeOverview(object):
     new_list_3 = []
 
     def __init__(self):
-        print "[*]ComputeOverview init"
+        print "\t[*]ComputeOverview init"
         del self.new_list[:]
         del self.new_list_2[:]
         del self.new_list_3[:]

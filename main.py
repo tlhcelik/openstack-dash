@@ -141,6 +141,7 @@ def compute_overview():
 def compute_instances():
     quotas_list = Quotas()
     quotas = quotas_list.get_quotas()
+    current_ram = quotas_list.get_current_using(type = 'ram')
 
     enviroments = Enviroments()
     flavors = enviroments.get_flavors()
@@ -156,6 +157,7 @@ def compute_instances():
                             flavors                 = flavors,
                             images                  = images,
                             sec_groups              = sec_groups,
+                            current_ram             = current_ram,
                             )
 
 @app.route('/compute/api-access')
@@ -261,11 +263,17 @@ def storage_containers():
 
 @app.route('/system/overview')
 def system_overview():
+    quotas_list = Quotas()
+    quotas = quotas_list.get_quotas()
+    current_ram = quotas_list.get_current_using(type = 'ram')
+
     return render_template('system/overview.html',
                             overview_status="active",
                             system_collapse_status="show",
                             page_location = "/system/overview",
-                            page_name = "Home > System > Overview"
+                            page_name = "Home > System > Overview",
+                            quotas = quotas,
+                            current_ram = current_ram,
                             )
 
 @app.route('/system/hypervisors')

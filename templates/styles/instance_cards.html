@@ -22,16 +22,20 @@
         </div>
         <!-- Card Body -->
         <div class="card-body">
-          <p><bold>ID</bold> : {{instance_values[i][0]}}</p>
-          <p><bold>Name</bold> : {{instance_values[i][1]}}</p>
+          <p><strong>ID</strong> : {{instance_values[i][0]}}</p>
+          <p><strong>Name</strong> : {{instance_values[i][1]}}</p>
           {% if instance_values[i][2] == "ACTIVE" %}
-            <p style="color: rgb(28,200,138)"><bold>Status</bold> : {{instance_values[i][2]}}</p>
+            <p style="color: rgb(28, 200, 138)"><strong>Status</strong> : {{instance_values[i][2]}}</p>
+          {% elif instance_values[i][2] == "SUSPENDED" %}
+            <p style="color: rgb(246 ,194, 62)"><strong>Status</strong> : {{instance_values[i][2]}}</p>
+          {% elif instance_values[i][2] == "ERROR" %}
+            <p style="color: rgb(231 ,74, 59)"><strong>Status</strong> : {{instance_values[i][2]}}</p>
           {% else %}
-            <p style="color: rgb(231,74,59)"><bold>Status</bold> : {{instance_values[i][2]}}</p>
+            <p><strong>Status</strong> : {{instance_values[i][2]}}</p>
           {% endif %}
-          <p><bold>Network</bold> : {{instance_values[i][3]}}</p>
-          <p><bold>Image</bold> : {{instance_values[i][4]}}</p>
-          <p><bold>Falvor</bold> : {{instance_values[i][5]}}</p>
+          <p><strong>Network</strong> : {{instance_values[i][3]}}</p>
+          <p><strong>Image</strong> : {{instance_values[i][4]}}</p>
+          <p><strong>Falvor</strong> : {{instance_values[i][5]}}</p>
           </div>
       </div>
 

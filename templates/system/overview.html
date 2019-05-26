@@ -2,7 +2,7 @@
 <html lang="en">
 
 {% include "/styles/style.html" ignore missing %}
-<link rel="shortcut icon" href="../static/img/favicon.ico">
+<link rel="shortcut icon" href="static/img/favicon.ico">
 <body id="page-top">
 
   {% include "/styles/sidebar.html" ignore missing %}
@@ -18,39 +18,50 @@
 
 
 
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
 
-          <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">System > Overview </h1><hr>
+                  <!-- Page Heading -->
+                  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800">System Overview</h1>
+                    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                  </div>
 
-        </div>
-        <!-- /.container-fluid -->
+              <hr>
+              <!-- PAGE CONTENT HERE START -->
 
-      </div>
-      <!-- End of Main Content -->
-      <!-- PAGE CONTENT HERE START -->
+              <div class="row">
 
-      <!-- PAGE CONTENT HERE END -->
+                {% include "/styles/cards.html" ignore missing %}
 
-      {% include "/styles/footer.html" ignore missing %}
+              </div>
 
+              <!-- PAGE CONTENT HERE END -->
+              </div>
+                <!-- /.container-fluid -->
 
-    </div>
-    <!-- End of Content Wrapper -->
-
-  </div>
-  <!-- End of Page Wrapper -->
-
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-  {% include "/styles/logout-modal.html" ignore missing %}
+              </div>
+              <!-- End of Main Content -->
 
 
 
-</body>
+              {% include "/styles/footer.html" ignore missing %}
 
-</html>
+
+            </div>
+            <!-- End of Content Wrapper -->
+
+          </div>
+          <!-- End of Page Wrapper -->
+
+          <!-- Scroll to Top Button-->
+          <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+          </a>
+
+          {% include "/styles/logout-modal.html" ignore missing %}
+
+
+        </body>
+
+        </html>

@@ -684,3 +684,646 @@ NameError: name 'name' is not defined
 10.0.0.1 - - [25/May/2019 22:51:07] "GET /compute/overview2 HTTP/1.1" 200 -
 10.0.0.1 - - [25/May/2019 22:52:19] "GET /compute/instances HTTP/1.1" 200 -
 10.0.0.1 - - [25/May/2019 22:53:17] "GET /compute/create-instance?instance_name=hello-world&counter=1&image_id=6f46c5c1-0276-46ef-90d0-c247ecbec6f1&flavor_id=c3cd9122-c844-41ea-8087-20126ec9f5b7&security_group_id=8fad6ef6-c73a-4375-8eb7-57b1b5b1447d HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:01:05] "GET /compute/overview2 HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:01:34] "GET /terminate/hello-world HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:03:01] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js.map HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:04:29] "GET /suspend/cirros-test HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:05:43] "GET /resume/cirros-test HTTP/1.1" 200 -
+Cannot 'resume' instance 427f09c9-b353-4de0-8eab-4e32b6b07e11 while it is in vm_state active (HTTP 409) (Request-ID: req-38e7c57d-1072-4dd2-946f-531255a9b419)
+10.0.0.1 - - [25/May/2019 23:06:23] "GET /resume/cirros-test HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:07:40] "GET /index HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:07:59] "GET /compute/overview2 HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:08:23] "GET /suspend/cirros-test HTTP/1.1" 200 -
+ * Serving Flask app "main" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+Traceback (most recent call last):
+  File "main.py", line 415, in <module>
+    app.run(debug=True, host='0.0.0.0', port=1158)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 943, in run
+    run_simple(host, port, self, **options)
+  File "/usr/lib/python2.7/dist-packages/werkzeug/serving.py", line 795, in run_simple
+    s.bind(get_sockaddr(hostname, port, address_family))
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+10.0.0.1 - - [25/May/2019 23:17:39] "GET /index HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:17:40] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:40] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:40] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:40] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:40] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:40] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:40] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:40] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:40] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:40] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:40] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:40] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:40] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:40] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:40] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:40] "GET /static/img/logs.png HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:40] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:53] "GET /compute/overview2 HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:17:53] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:53] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:53] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:53] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:53] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:53] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:53] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:53] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:53] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:53] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:53] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:53] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:53] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:53] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:53] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:17:53] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:11] "GET /resume/cirros-test HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:18:11] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:11] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:11] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:11] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:11] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:11] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:11] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:11] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:11] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:11] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:11] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:11] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:11] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:11] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:11] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:11] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:37] "GET /compute/instances HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:18:38] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:38] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:38] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:38] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:38] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:38] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:38] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:38] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:38] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:38] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:38] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:38] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:38] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:38] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:38] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:18:38] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:27:48] "GET /system/overview HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:27:48] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:27:48] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:27:48] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:27:48] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:27:48] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:27:48] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:27:48] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:27:48] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:27:48] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:27:48] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:27:48] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:27:48] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:27:48] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:27:48] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:27:48] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:27:49] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:28:28] "GET /system/overview HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/osbash/openstack-dash/main.py", line 268, in system_overview
+    page_name = "Home > System > Overview"
+  File "/usr/lib/python2.7/dist-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/usr/lib/python2.7/dist-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/usr/lib/python2.7/dist-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/lib/python2.7/dist-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/openstack-dash/templates/system/overview.html", line 31, in top-level template code
+    {% include "/styles/instance_cards.html" ignore missing %}
+  File "/home/osbash/openstack-dash/templates/styles/instance_cards.html", line 2, in top-level template code
+    {% for i in range(0, instance_count) %}
+UndefinedError: 'instance_count' is undefined
+10.0.0.1 - - [25/May/2019 23:28:28] "GET /system/overview?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:28:28] "GET /system/overview?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:28:28] "GET /system/overview?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:28:29] "GET /system/overview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:28:29] "GET /system/overview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:29:10] "GET /system/overview HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:29:10] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:10] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:10] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:10] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:10] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:10] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:10] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:10] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:10] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:10] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:10] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:10] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:10] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:10] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:10] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:10] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:11] "GET /system/static/img/favicon.ico HTTP/1.1" 404 -
+10.0.0.1 - - [25/May/2019 23:29:24] "GET /system/overview HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:29:24] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:24] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:24] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:24] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:24] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:24] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:24] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:24] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:24] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:24] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:24] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:24] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:24] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:24] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:24] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:24] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:35] "GET /system/overview HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:29:35] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:35] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:35] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:35] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:35] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:35] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:35] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:35] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:35] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:35] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:35] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:35] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:36] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:36] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:36] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:29:36] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:05] "GET /system/overview HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:30:05] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:05] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:05] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:05] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:05] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:05] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:05] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:05] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:05] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:05] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:05] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:05] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:05] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:05] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:05] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:05] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:16] "GET /system/overview HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:30:16] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:16] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:16] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:16] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:16] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:16] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:16] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:16] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:16] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:16] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:16] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:16] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:16] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:16] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:16] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:16] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:36] "GET /system/overview HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:30:36] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:36] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:36] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:36] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:36] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:36] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:36] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:36] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:36] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:36] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:36] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:36] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:36] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:36] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:36] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:36] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:54] "GET /system/overview HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:30:54] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:54] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:54] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:54] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:54] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:54] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:54] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:54] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:54] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:54] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:54] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:54] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:54] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:54] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:54] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:30:54] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:31:25] "GET /compute/instances HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:31:25] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:31:25] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:31:25] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:31:25] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:31:25] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:31:25] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:31:25] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:31:25] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:31:25] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:31:25] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:31:25] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:31:25] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:31:25] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:31:25] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:31:25] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:31:25] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:31:30] "GET /system/overview HTTP/1.1" 500 -
+10.0.0.1 - - [25/May/2019 23:31:30] "GET /system/overview?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:31:30] "GET /system/overview?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:31:30] "GET /system/overview?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/osbash/openstack-dash/main.py", line 268, in system_overview
+    page_name = "Home > System > Overview"
+  File "/usr/lib/python2.7/dist-packages/flask/templating.py", line 135, in render_template
+    context, ctx.app)
+  File "/usr/lib/python2.7/dist-packages/flask/templating.py", line 117, in _render
+    rv = template.render(context)
+  File "/usr/lib/python2.7/dist-packages/jinja2/environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "/usr/lib/python2.7/dist-packages/jinja2/environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/osbash/openstack-dash/templates/system/overview.html", line 33, in top-level template code
+    {% include "/styles/cards.html" ignore missing %}
+  File "/home/osbash/openstack-dash/templates/styles/cards.html", line 8, in top-level template code
+    <div class="h5 mb-0 font-weight-bold text-gray-800">{{ram_status}} / {{quotas[1]}}MB</div>
+  File "/usr/lib/python2.7/dist-packages/jinja2/environment.py", line 411, in getitem
+    return obj[argument]
+UndefinedError: 'quotas' is undefined
+10.0.0.1 - - [25/May/2019 23:31:31] "GET /system/overview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:31:31] "GET /system/overview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ * Detected change in '/home/osbash/openstack-dash/main.py', reloading
+	[*]Quotas init
+['20', '51200', '10', '10', '100', '10', '10', '10']
+[*]ComputeOverview init
+[*]ComputeOverview init
+	[*]Quotas init
+	[*]Enviroments init
+[*]ComputeOverview init
+[*]ComputeOverview init
+[*]ComputeOverview init
+[*]ComputeOverview init
+[*]ComputeOverview init
+[*]ComputeOverview init
+[*]ComputeOverview init
+[*]ComputeOverview init
+[*]ComputeOverview init
+[*]ComputeOverview init
+[*]ComputeOverview init
+[*]ComputeOverview init
+	[*]Quotas init
+['20', '51200', '10', '10', '100', '10', '10', '10']
+[*]ComputeOverview init
+[*]ComputeOverview init
+[*]ComputeOverview init
+[*]ComputeOverview init
+	[*]Quotas init
+['20', '51200', '10', '10', '100', '10', '10', '10']
+[*]ComputeOverview init
+[*]ComputeOverview init
+[*]ComputeOverview init
+[*]ComputeOverview init
+	[*]Quotas init
+	[*]Enviroments init
+	[*]Quotas init
+	[*]Enviroments init
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-818-505
+10.0.0.1 - - [25/May/2019 23:32:32] "GET /system/overview HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:32:32] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:32] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:32] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:32] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:32] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:32] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:32] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:32] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:32] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:32] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:32] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:32] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:32] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:32] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:32] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:33] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:58] "GET /system/overview HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:32:58] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:58] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:58] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:58] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:58] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:58] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:58] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:58] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:58] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:58] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:58] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:58] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:58] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:59] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:59] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:32:59] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:37] "GET /system/overview HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:33:37] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:37] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:37] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:37] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:37] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:37] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:37] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:37] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:37] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:37] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:37] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:37] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:37] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:37] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:37] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:37] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:49] "GET /system/overview HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:33:49] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:49] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:49] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:49] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:49] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:49] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:49] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:49] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:49] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:49] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:49] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:49] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:49] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:49] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:49] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:33:49] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+ * Detected change in '/home/osbash/openstack-dash/_quotas.py', reloading
+	[*]Quotas init
+	[*]Quotas init
+	[*]Quotas init
+	[*]Quotas init
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-818-505
+ * Detected change in '/home/osbash/openstack-dash/_quotas.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-818-505
+10.0.0.1 - - [25/May/2019 23:34:39] "GET /system/hypervisors HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:34:39] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:34:39] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:34:39] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:34:39] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:34:39] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:34:39] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:34:39] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:34:39] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:34:39] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:34:39] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:34:39] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:34:39] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:34:39] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:34:39] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:34:39] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:34:40] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:34:40] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:34:46] "GET /system/overview HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/osbash/openstack-dash/main.py", line 265, in system_overview
+    quotas = quotas_list.get_quotas()
+  File "/home/osbash/openstack-dash/_quotas.py", line 31, in get_quotas
+    for i in range(len(self.new_list)):
+AttributeError: 'Quotas' object has no attribute 'new_list'
+10.0.0.1 - - [25/May/2019 23:34:46] "GET /system/overview?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:34:46] "GET /system/overview?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:34:46] "GET /system/overview?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:34:46] "GET /system/overview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:34:46] "GET /system/overview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ * Detected change in '/home/osbash/openstack-dash/_quotas.py', reloading
+	[*]Quotas init
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-818-505
+10.0.0.1 - - [25/May/2019 23:35:08] "GET /system/overview HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:35:08] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:08] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:08] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:08] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:08] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:08] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:08] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:08] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:08] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:08] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:08] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:08] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:08] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:08] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:08] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:09] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+ * Detected change in '/home/osbash/openstack-dash/_quotas.py', reloading
+	[*]Quotas init
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-818-505
+10.0.0.1 - - [25/May/2019 23:35:17] "GET /system/hypervisors HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:35:17] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:17] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:17] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:17] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:17] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:17] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:17] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:17] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:17] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:17] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:17] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:17] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:17] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:17] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:17] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:18] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:23] "GET /system/overview HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:35:23] "GET /static/vendor/datatables/dataTables.bootstrap4.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:23] "GET /static/vendor/fontawesome-free/css/all.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:23] "GET /static/css/sb-admin-2.min.css HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:23] "GET /static/vendor/jquery/jquery.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:23] "GET /static/vendor/bootstrap/js/bootstrap.bundle.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:23] "GET /static/vendor/jquery-easing/jquery.easing.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:23] "GET /static/js/sb-admin-2.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:23] "GET /static/js/demo/chart-area-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:23] "GET /static/vendor/chart.js/Chart.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:23] "GET /static/js/demo/chart-pie-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:23] "GET /static/vendor/datatables/dataTables.bootstrap4.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:23] "GET /static/vendor/datatables/jquery.dataTables.min.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:23] "GET /static/js/demo/datatables-demo.js HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:23] "GET /static/img/favicon.ico HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:23] "GET /static/img/loading.gif HTTP/1.1" 304 -
+10.0.0.1 - - [25/May/2019 23:35:23] "GET /static/vendor/fontawesome-free/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 -
+ * Detected change in '/home/osbash/openstack-dash/_quotas.py', reloading
+	[*]Quotas init
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-818-505
+ * Detected change in '/home/osbash/openstack-dash/main.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-818-505
+10.0.0.1 - - [25/May/2019 23:40:54] "GET /system/overview HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/osbash/openstack-dash/main.py", line 266, in system_overview
+    guotas_list.get_current_using()
+NameError: global name 'guotas_list' is not defined
+10.0.0.1 - - [25/May/2019 23:40:54] "GET /system/overview?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:40:54] "GET /system/overview?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:40:54] "GET /system/overview?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:40:54] "GET /system/overview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:40:54] "GET /system/overview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:41:35] "GET /system/overview HTTP/1.1" 500 -
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 2309, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 2295, in wsgi_app
+    response = self.handle_exception(e)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1741, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/osbash/openstack-dash/main.py", line 266, in system_overview
+    guotas_list.get_current_using()
+NameError: global name 'guotas_list' is not defined
+10.0.0.1 - - [25/May/2019 23:41:35] "GET /system/overview?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:41:35] "GET /system/overview?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:41:35] "GET /system/overview?__debugger__=yes&cmd=resource&f=jquery.js HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:41:36] "GET /system/overview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+10.0.0.1 - - [25/May/2019 23:41:36] "GET /system/overview?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+ * Detected change in '/home/osbash/openstack-dash/main.py', reloading
+	[*]Quotas init
+	[*]Quotas init
+ * Serving Flask app "main" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+Traceback (most recent call last):
+  File "main.py", line 420, in <module>
+    app.run(debug=True, host='0.0.0.0', port=1158)
+  File "/usr/lib/python2.7/dist-packages/flask/app.py", line 943, in run
+    run_simple(host, port, self, **options)
+  File "/usr/lib/python2.7/dist-packages/werkzeug/serving.py", line 795, in run_simple
+    s.bind(get_sockaddr(hostname, port, address_family))
+  File "/usr/lib/python2.7/socket.py", line 228, in meth
+    return getattr(self._sock,name)(*args)
+socket.error: [Errno 98] Address already in use
+ * Serving Flask app "main" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://0.0.0.0:1158/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-818-505
+ * Detected change in '/home/osbash/openstack-dash/_quotas.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 150-818-505
