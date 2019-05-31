@@ -27,6 +27,7 @@ class Quotas(object):
 
     def __init__(self):
         del self.new_list_2[:]
+        self.total_using_ram = 0
         print "\t[*]Quotas init"
 
 
@@ -60,7 +61,7 @@ class Quotas(object):
             for using_flavor in self.instance_flavor_list:
                 if (self.flavors[i][1] == using_flavor):
                     self.total_using_ram += int(self.flavors[i][2])
-        if type == 'ram':
+        if type == 'ram' and self.total_using_ram != 0:
             return self.total_using_ram
         else:
             return 0

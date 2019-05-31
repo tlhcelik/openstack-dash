@@ -16,10 +16,10 @@ from views import Views
 v = Views()
 
 #page classes, each page have a class. (exp: _page-name.py)
-from _settings import Settings
-from _compute_overview import ComputeOverview
-from _quotas import Quotas
-from _enviroments import Enviroments
+from libs._settings import Settings
+from libs._compute_overview import ComputeOverview
+from libs._quotas import Quotas
+from libs._enviroments import Enviroments
 
 #globals
 NOTIFY = ''
@@ -64,13 +64,15 @@ def do_login():
 
     quotas_list = Quotas()
     quotas = quotas_list.get_quotas()
-    print quotas
+    current_ram = quotas_list.get_current_using(type = 'ram')
+
     return render_template('index.html',
                             random_num = random.randint(1,100),
                             running_instances = random.randint(1,10),
                             volume_storage = random.randint(1,550),
                             ram_status = random.randint(1,100),
                             quotas = quotas,
+                            current_ram = current_ram,
                         )
 
 @app.route('/login/register')
