@@ -1,0 +1,38 @@
+<div class="row">
+  {% for i in flavors %}
+    <div class="col-lg-6">
+
+      <!-- Dropdown Card Example -->
+      <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+          <h6 class="m-0 font-weight-bold text-primary">{{flavors[loop.index-1][1 ]}}</h6>
+          <div class="dropdown no-arrow">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(17px, 19px, 0px);">
+              <a onclick="openNav()" class="dropdown-item" href="/edit/{{flavors[loop.index-1][0]}}">Edit Flavor </a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" style="color: rgb(231,74,59)" href="/delete/{{flavors[loop.index-1][0]}}">Delete Flavor</a>
+            </div>
+          </div>
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+          <p><strong>ID</strong> : {{flavors[loop.index-1][0]}}</p>
+          <p><strong>Name</strong> : {{flavors[loop.index-1][1]}}</p>
+          <p><strong>RAM(MB)</strong> : {{flavors[loop.index-1][2]}}</p>
+          <p><strong>Disk(GB)</strong> : {{flavors[loop.index-1][3]}}</p>
+          <p><strong>Ephemeral</strong> : {{flavors[loop.index-1][4]}}</p>
+          <p><strong>VCPU's</strong> : {{flavors[loop.index-1][5]}}</p>
+          <p><strong>Public</strong> : {{flavors[loop.index-1][6]}}</p>
+
+          </div>
+      </div>
+
+    </div>
+  {% endfor %}
+
+</div>
+<!--card column end-->

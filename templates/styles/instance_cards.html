@@ -16,7 +16,7 @@
               <a onclick="openNav()" class="dropdown-item" href="/suspend/{{instance_values[i][1]}}">Suspend Instance</a>
               <a onclick="openNav()" class="dropdown-item" href="/resume/{{instance_values[i][1]}}">Resume Instance</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" style="color: rgb(231,74,59)" href="/terminate/{{instance_values[i][1]}}">Terminate Instance</a>
+              <a class="dropdown-item" style="color: rgb(231,74,59)" href="/instance/terminate/{{instance_values[i][1]}}">Terminate Instance</a>
             </div>
           </div>
         </div>
@@ -35,7 +35,7 @@
           {% endif %}
           <p><strong>Network</strong> : {{instance_values[i][3]}}</p>
           <p><strong>Image</strong> : {{instance_values[i][4]}}</p>
-          <p><strong>Falvor</strong> : {{instance_values[i][5]}}</p>
+          <p><strong>Falvor</strong> : <a href="/system/flavors">{{instance_values[i][5]}}</a></p>
           </div>
       </div>
 

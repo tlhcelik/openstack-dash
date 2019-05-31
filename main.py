@@ -20,6 +20,7 @@ from libs._settings import Settings
 from libs._compute_overview import ComputeOverview
 from libs._quotas import Quotas
 from libs._enviroments import Enviroments
+from libs._system_overview import SystemOverview
 
 #globals
 NOTIFY = ''
@@ -112,7 +113,7 @@ def create_instance():
     NOTIFY = status+" to "+str(instance_name)
     return compute_overview()
 
-@app.route('/<action>/<instance_name>')
+@app.route('/instance/<action>/<instance_name>')
 def instance_transactions(action, instance_name):
     global NOTIFY
     compute_overview_page = ComputeOverview()
@@ -263,6 +264,15 @@ def storage_containers():
 # system definitions start
 ################################################################################
 
+@app.route('/<action>/<flavor_id>')
+def flavor_transactions(action, flavor_id):
+    global NOTIFY
+    system_overview_page = SystemOverview()
+    status = system_overview_page.flavor_action(action, flavor_id)
+    NOTIFY = status
+
+    return system_flavors()
+
 @app.route('/system/overview')
 def system_overview():
     quotas_list = Quotas()
@@ -305,7 +315,7 @@ def system_instances():
                             page_name = "Home > System > Instances"
                             )
 @app.route('/system/volumes')
-def volumes():
+def system_volumes():
     return render_template('system/volumes.html',
                             volumes_status="active",
                             system_collapse_status="show",
@@ -315,11 +325,19 @@ def volumes():
 
 @app.route('/system/flavors')
 def system_flavors():
+    global NOTIFY
+    notify = NOTIFY
+    flavor =  Enviroments()
+    flavors = flavor.get_flavors()
+
     return render_template('system/flavors.html',
                             flavors_status="active",
                             system_collapse_status="show",
                             page_location = "/system/flavors",
-                            page_name = "Home > System > Flavors"
+                            page_name = "Home > System > Flavors",
+                            flavors = flavors,
+                            notify = notify,
+
                             )
 
 @app.route('/system/images')
