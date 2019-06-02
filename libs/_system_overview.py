@@ -25,3 +25,28 @@ class SystemOverview(object):
             return "flavor delete succecfully"
         except Exception as e:
             return "flavor delete unsuccecfully {0}".format(e)
+
+    def create_flavor(self, flavor_name, ram, disk, empheral, vcpu, is_public):
+        try:
+            if is_public == 'True':
+                self.status = sp.check_output(['openstack', 'flavor', 'create',
+                                                '--ram', ram,
+                                                '--disk', disk,
+                                                '--ephemeral', empheral,
+                                                '--vcpus', vcpu,
+                                                '--public',
+                                                flavor_name])
+                return "flavor delete succecfully"
+
+            else:
+                self.status = sp.check_output(['openstack', 'flavor', 'create',
+                                                '--ram', ram,
+                                                '--disk', disk,
+                                                '--ephemeral', empheral,
+                                                '--vcpus', vcpu,
+                                                '--private',
+                                                flavor_name])
+                return "flavor create succecfully"
+
+        except Exception as e:
+            return "flavor create unsuccecfully {0}".format(e)

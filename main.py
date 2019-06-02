@@ -267,10 +267,42 @@ def storage_containers():
 @app.route('/<action>/<flavor_id>')
 def flavor_transactions(action, flavor_id):
     global NOTIFY
-    system_overview_page = SystemOverview()
-    status = system_overview_page.flavor_action(action, flavor_id)
-    NOTIFY = status
+    if action == 'edit':
+        return render_template('system/flavors.html',
+                                flavors_status="active",
+                                system_collapse_status="show",
+                                page_location = "/system/flavors",
+                                page_name = "Home > System > Flavors",
+                                editable_page = True,
+                                )
+    else:
+        system_overview_page = SystemOverview()
+        status = system_overview_page.flavor_action(action, flavor_id)
+        NOTIFY = status
 
+    return system_flavors()
+
+@app.route('/system/create-flavor', methods=['POST', 'GET'])
+def create_flavor():
+    global NOTIFY
+    system_overview_page = SystemOverview()
+
+    ram         = request.args.get('ram')
+    flavor_name = request.args.get('flavor_name')
+    disk        = request.args.get('disk')
+    empheral    = request.args.get('empheral')
+    is_public   = request.args.get('is_public')
+    vcpu        = request.args.get('vcpu')
+
+    status = system_overview_page.create_flavor(flavor_name,
+                                                    ram,
+                                                    disk,
+                                                    empheral,
+                                                    vcpu,
+                                                    is_public
+                                                    )
+
+    NOTIFY = status + " to " + str(flavor_name)
     return system_flavors()
 
 @app.route('/system/overview')

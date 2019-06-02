@@ -20,18 +20,78 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
+        <h1 class="h3 mb-0 text-gray-800">Flavors</h1><hr>
+          {% if editable_page %}
+          <!-- create flavor card -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary">Create new flavor</h6>
+            </div>
+            <div class="card-body">
 
-          <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Flavors </h1><hr>
-          {% include "/styles/flavor_cards.html" ignore missing %}
-        </div>
+              <form class="user" method="GET" action="/system/create-flavor">
+
+                <div class="form-group">
+
+                  <input type="text" class="form-control form-control-user" name="flavor_name"  placeholder="Flavor Name">
+                </div>
+
+                <div class="form-group">
+                  <p>RAM (MB):
+
+                  <input type="number" class="form-control form-control-user" name="ram" value="1024">
+                </p>
+                </div>
+
+                <div class="form-group">
+                  <p>Disk (GB):
+
+                    <input type="number" class="form-control form-control-user" name="disk" value="5">
+                </p>
+                </div>
+
+                <div class="form-group">
+                  <p>Empheral:
+
+                  <input type="number" class="form-control form-control-user" name="empheral" value="0">
+                </p>
+                </div>
+
+                <div class="form-group">
+                  <p>VCPU's:
+
+                  <input type="number" class="form-control form-control-user" name="vcpu" value="1">
+                </p>
+                </div>
+
+                <div class="form-group">
+                  <p>Is Public:
+
+                    <select name="is_public">
+                        <option value="True">True</option>
+                        <option value="False">False</option>
+                    </select>
+                </p>
+                </div>
+
+                <button onclick="openNav()" type="submit" class="btn btn-primary btn-user btn-block">Create</button>
+
+              </form>
+
+            </div>
+          </div>
+          <!-- create instance card -->
+          {% else %}
+            {% include "/styles/flavor_cards.html" ignore missing %}
+          {% endif %}
+
         <!-- /.container-fluid -->
 
-
+</div>
 
       </div>
       <!-- End of Main Content -->
-  
+
 
       {% include "/styles/footer.html" ignore missing %}
 
