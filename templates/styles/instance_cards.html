@@ -6,36 +6,36 @@
       <div class="card shadow mb-4">
         <!-- Card Header - Dropdown -->
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-0 font-weight-bold text-primary">{{instance_values[i][1]}}</h6>
+          <h6 class="m-0 font-weight-bold text-primary">{{instance_values[i]['name']}}</h6>
           <div class="dropdown no-arrow">
             <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink" x-placement="bottom-end" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(17px, 19px, 0px);">
-              <a onclick="openNav()" class="dropdown-item" href="/start/{{instance_values[i][1]}}">Start Instance</a>
-              <a onclick="openNav()" class="dropdown-item" href="/suspend/{{instance_values[i][1]}}">Suspend Instance</a>
-              <a onclick="openNav()" class="dropdown-item" href="/resume/{{instance_values[i][1]}}">Resume Instance</a>
+              <a onclick="openNav()" class="dropdown-item" href="/start/{{instance_values[i]['name']}}">Start Instance</a>
+              <a onclick="openNav()" class="dropdown-item" href="/suspend/{{instance_values[i]['name']}}">Suspend Instance</a>
+              <a onclick="openNav()" class="dropdown-item" href="/resume/{{instance_values[i]['name']}}">Resume Instance</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" style="color: rgb(231,74,59)" href="/instance/terminate/{{instance_values[i][1]}}">Terminate Instance</a>
+              <a class="dropdown-item" style="color: rgb(231,74,59)" href="/instance/terminate/{{instance_values[i]['name']}}">Terminate Instance</a>
             </div>
           </div>
         </div>
         <!-- Card Body -->
         <div class="card-body">
-          <p><strong>ID</strong> : {{instance_values[i][0]}}</p>
-          <p><strong>Name</strong> : {{instance_values[i][1]}}</p>
-          {% if instance_values[i][2] == "ACTIVE" %}
-            <p style="color: rgb(28, 200, 138)"><strong>Status</strong> : {{instance_values[i][2]}}</p>
-          {% elif instance_values[i][2] == "SUSPENDED" %}
-            <p style="color: rgb(246 ,194, 62)"><strong>Status</strong> : {{instance_values[i][2]}}</p>
-          {% elif instance_values[i][2] == "ERROR" %}
-            <p style="color: rgb(231 ,74, 59)"><strong>Status</strong> : {{instance_values[i][2]}}</p>
+          <p><strong>ID</strong> : {{instance_values[i]['id']}}</p>
+          <p><strong>Name</strong> : {{instance_values[i]['name']}}</p>
+          {% if instance_values[i]['status'] == "ACTIVE" %}
+            <p style="color: rgb(28, 200, 138)"><strong>Status</strong> : {{instance_values[i]['status']}}</p>
+          {% elif instance_values[i]['status'] == "SUSPENDED" %}
+            <p style="color: rgb(246 ,194, 62)"><strong>Status</strong> : {{instance_values[i]['status']}}</p>
+          {% elif instance_values[i]['status'] == "ERROR" %}
+            <p style="color: rgb(231 ,74, 59)"><strong>Status</strong> : {{instance_values[i]['status']}}</p>
           {% else %}
-            <p><strong>Status</strong> : {{instance_values[i][2]}}</p>
+            <p><strong>Status</strong> : {{instance_values[i]['status']}}</p>
           {% endif %}
-          <p><strong>Network</strong> : {{instance_values[i][3]}}</p>
-          <p><strong>Image</strong> : {{instance_values[i][4]}}</p>
-          <p><strong>Falvor</strong> : <a href="/system/flavors">{{instance_values[i][5]}}</a></p>
+          <p><strong>Network</strong> : {{instance_values[i]['network-provider']}}</p>
+          <p><strong>Image</strong> : {{instance_values[i]['image']}}</p>
+          <p><strong>Falvor</strong> : <a href="/system/flavors">{{instance_values[i]['flavor']}}</a></p>
           </div>
       </div>
 

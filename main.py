@@ -21,6 +21,7 @@ from libs._compute_overview import ComputeOverview
 from libs._quotas import Quotas
 from libs._enviroments import Enviroments
 from libs._system_overview import SystemOverview
+from libs._db import Database
 
 #globals
 NOTIFY = ''
@@ -126,9 +127,10 @@ def instance_transactions(action, instance_name):
 def compute_overview():
     global NOTIFY
     status = NOTIFY
-
-    compute_overview_page = ComputeOverview()
-    instance_values = compute_overview_page.get_instances()
+    # compute_overview_page = ComputeOverview()
+    # instance_values = compute_overview_page.get_instances()
+    db = Database(db_name='openstack_db', collection='instances')
+    instance_values, count =  db.get_collection(collection = 'instances')
 
     return render_template('compute/overview.html',
                             compute_collapse_status = "show",
@@ -137,7 +139,7 @@ def compute_overview():
                             page_name           = "Home > Compute > Overview",
                             notify              = status,
                             instance_values     = instance_values,
-                            instance_count      = len(instance_values),
+                            instance_count      = count,
                             )
 
 @app.route('/compute/instances')
@@ -471,5 +473,7 @@ def profile_roles():
 # python main.py
 ################################################################################
 if __name__ == "__main__":
+    db = Database(db_name='openstack_db', collection='instances')
+    db.check_doc_for_instances()
     app.secret_key = os.urandom(12)
     app.run(debug=True, host='0.0.0.0', port=1158)
