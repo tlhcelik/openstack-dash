@@ -27,7 +27,9 @@ class Quotas(object):
 
     def __init__(self):
         del self.new_list_2[:]
+        del self.instance_flavor_list[:]
         self.total_using_ram = 0
+
         print "\t[*]Quotas init"
 
 
@@ -49,6 +51,13 @@ class Quotas(object):
         return self.new_list_2
 
     def get_current_using(self, type = None):
+        """
+        1. get instaces
+        2. get this instaces flavors ( self.total_using_ram += int(self.flavors[i][2]) )
+        3. get each one flavors ram
+        4. sum total using ram
+        """
+        self.total_using_ram = 0
         self.compute_overview = ComputeOverview()
         self.instances = self.compute_overview.get_instances()
         for i in range(len(self.instances)):
@@ -61,6 +70,7 @@ class Quotas(object):
             for using_flavor in self.instance_flavor_list:
                 if (self.flavors[i][1] == using_flavor):
                     self.total_using_ram += int(self.flavors[i][2])
+
         if type == 'ram' and self.total_using_ram != 0:
             return self.total_using_ram
         else:

@@ -66,6 +66,7 @@ def do_login():
 
     quotas_list = Quotas()
     quotas = quotas_list.get_quotas()
+    current_ram = 0
     current_ram = quotas_list.get_current_using(type = 'ram')
 
     return render_template('index.html',
