@@ -1,8 +1,8 @@
 from views import Views
 v = Views()
 
-from flask import Flask, flash, redirect, render_template, request, session, abort, Markup
 
+from flask import Flask, flash, redirect, render_template, request, session, abort, Markup
 import subprocess as sp
 
 class ComputeOverview(object):
@@ -80,6 +80,10 @@ class ComputeOverview(object):
     def terminate_instance(self, name):
         try:
             self.status = sp.check_output(['nova', 'delete', name])
+
+            db = Database(db_name='openstack_db', collection='instances')
+            db.delete_selected_instance(instance_name = name)
+
             return "Instance delete(terminate) succecfully"
         except Exception as e:
             return "Instance delete(terminate) unsuccecfully"

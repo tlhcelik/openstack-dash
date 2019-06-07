@@ -67,8 +67,12 @@ class Database(object):
                                         'image': self.openstack_instances[i][4],
                                         'flavor': self.openstack_instances[i][5],
                                         })
-                    print self.db_instance
+                    #print self.db_instance
                     self.is_add_db = self.collection.insert_one(self.db_instance)
                     self.db_instance.clear()
                     print '\t[*]DB updated'
         return 'OK'
+
+        def delete_selected_instance(instance_name = 0):
+            self.collection.delete_one({'name': instance_name})
+        pass

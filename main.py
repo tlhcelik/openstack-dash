@@ -113,6 +113,8 @@ def create_instance():
                                                     )
 
     NOTIFY = status+" to "+str(instance_name)
+    db = Database(db_name='openstack_db', collection='instances')
+    db.check_doc_for_instances()
     return compute_overview()
 
 @app.route('/instance/<action>/<instance_name>')
@@ -122,6 +124,8 @@ def instance_transactions(action, instance_name):
     status = compute_overview_page.instance_action(action, instance_name)
     NOTIFY = status
 
+    db = Database(db_name='openstack_db', collection='instances')
+    db.check_doc_for_instances()
     return compute_overview()
 
 @app.route('/compute/overview')
