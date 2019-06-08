@@ -3,7 +3,9 @@ python:
     - "2.7"
 os:
     - linux
-    
-install: "pip install flask"
 
+install:
+    - "pip install flask"
+    - "pip install pymongo"
+    
 script: "nohup python main.py &"
