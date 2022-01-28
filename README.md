@@ -17,7 +17,7 @@ Can use this system on your openstack controllers. This **openstack-dash** only 
 | Flavors | list, create and edit flavors |
 | Security Groups | list, create and edit security groups |
 
-## Using Technologies
+## Usings
 <img src="https://github.com/tlhcelik/openstack-dash/blob/openstack-with-db/docs/images/flask-logo.jpg" width="200" height="150" /> <img src="https://github.com/tlhcelik/openstack-dash/blob/openstack-with-db/docs/images/mongodb-logo.png" width="200" height="150" />
 <img src="https://github.com/tlhcelik/openstack-dash/blob/openstack-with-db/docs/images/docker-logo.png" width="200" height="150" />
 <img src="https://github.com/tlhcelik/openstack-dash/blob/openstack-with-db/docs/images/python-logo.jpg" width="200" height="150" />
